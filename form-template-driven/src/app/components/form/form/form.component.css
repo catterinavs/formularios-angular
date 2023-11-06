@@ -1,0 +1,52 @@
+.all{
+  position: absolute;
+  width: 1344px;
+  height: 880px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 25px;
+  background-color: #FFF8C9;
+}
+
+.container{
+  display: flex;
+}
+
+.pagina{
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.number{
+  width: 76px;
+  height: 76px;
+  font-family: Inter;
+  font-size: 48px;
+  text-align: center;
+}
+
+.selected{
+  background-color: #614BB0;
+  color: white;
+}
+
+.unselected{
+  background-color: #D0BFFF;
+  color: #787485;
+}
+
+.line{
+  width: 152px;
+  height: 2px;
+  background-color: #787485;
+  margin-top: 37px;
+}
+
+
+.form{
+  margin-top: 25px;
+}
+
+
+
