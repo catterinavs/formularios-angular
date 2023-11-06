@@ -46,7 +46,21 @@
 
 .form{
   margin-top: 25px;
+  font-family: Inter;
+  color: #787485;
+  margin-left: 10%;
 }
 
+input{
+  width: 471px;
+  height: 65px;
+  background-color: #D0BFFF;
+  border: none;
+  border-radius: 50px;
+}
+label{
+  margin-bottom: 10px;
+  display: block;
+}
 
 
