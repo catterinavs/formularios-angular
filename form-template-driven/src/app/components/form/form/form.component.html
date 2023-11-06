@@ -1,16 +1,17 @@
 <div class="all">
-  <div class="pagina container">
-    <div class="rounded-circle number selected">1</div>
+  <div *ngIf="componentAtivo !== 'Quinto'" class="pagina container">
+    <div class="rounded-circle number" [ngClass]="componentAtivo == 'Primeiro' ? 'selected' : 'unselected'">1</div>
     <div class="line"></div>
-    <div class="rounded-circle number unselected">2</div>
+    <div class="rounded-circle number" [ngClass]="componentAtivo == 'Segundo' ? 'selected' : 'unselected'">2</div>
     <div class="line"></div>
-    <div class="rounded-circle number unselected">3</div>
+    <div class="rounded-circle number" [ngClass]="componentAtivo == 'Terceiro' ? 'selected' : 'unselected'">3</div>
     <div class="line"></div>
-    <div class="rounded-circle number unselected">4</div>
+    <div class="rounded-circle number" [ngClass]="componentAtivo == 'Quarto' ? 'selected' : 'unselected'">4</div>
   </div>
   <div class="form">
 
-    <div class="center">
+    <div *ngIf="componentAtivo === 'Primeiro'">
+      <h1>Dados Pessoais</h1>
       <div class="col-12">
         <div class="row">
           <div class="col-6"><label for="nome">Nome</label><input type="text"></div>
@@ -31,9 +32,14 @@
         <!--Olhar dps-->
         <div class="col-6"><label for="rg">RG</label><input type="number"></div>
       </div>
+
+      <div>
+        <button (click)="passarParaSegundoSlide()"><i class="bi bi-arrow-right-circle-fill"></i></button>
+      </div>
     </div>
 
-    <div>
+    <div *ngIf="componentAtivo === 'Segundo'">
+      <h1>Dados Cadastrais</h1>
       <div class="row">
         <div class="col-6"><label for="nome-user">Nome de Usuário</label><input type="text"></div>
         <div class="col-6"><label for="nome-pai">Nome do Pai</label><input type="text"></div>
@@ -46,9 +52,14 @@
         <div class="col-6"><label for="ddd">DDD</label><input type="number"></div>
         <div class="col-6"><label for="celular">Celular</label><input type="number"></div>
       </div>
+
+      <div>
+        <button style="margin-top: 119px;" (click)="passarParaTerceiroSlide()"><i class="bi bi-arrow-right-circle-fill"></i></button>
+      </div>
     </div>
 
-    <div>
+    <div *ngIf="componentAtivo === 'Terceiro'">
+      <h1>Endereço</h1>
       <div class="row">
         <div class="col-6"><label for="rua">Rua</label><input type="text"></div>
         <div class="col-6"><label for="bairro">Bairro</label><input type="text"></div>
@@ -65,9 +76,14 @@
         <div class="col-6"><label for="cep">CEP</label><input type="number"></div>
         <div class="col-6"><label for="ponto-ref">Ponto de Referência</label><input type="text"></div>
       </div>
+
+      <div>
+        <button (click)="passarParaQuartoSlide()"><i class="bi bi-arrow-right-circle-fill"></i></button>
+      </div>
     </div>
 
-    <div>
+    <div *ngIf="componentAtivo === 'Quarto'">
+      <h1>Características</h1>
       <div class="row">
         <div class="col-6"><label for="altura">Altura</label><input type="number"></div>
         <div class="col-6"><label for="peso">Peso</label><input type="number"></div>
@@ -80,6 +96,12 @@
         <div class="col-6"><label for="signo">Signo</label><input type="text"></div>
         <div class="col-6"><label for="animal">Animal Preferido</label><input type="text"></div>
       </div>
+
+      <button style="margin-top: 119px;" (click)="passarParaQuintoSlide()"><i class="bi bi-arrow-right-circle-fill"></i></button>
+    </div>
+
+    <div *ngIf="componentAtivo === 'Quinto'">
+      <h1 class="final">Agradecemos Por Sua Inscrição!</h1>
     </div>
 
   </div>

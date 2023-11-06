@@ -16,6 +16,7 @@
 .pagina{
   justify-content: center;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .number{
@@ -57,10 +58,39 @@ input{
   background-color: #D0BFFF;
   border: none;
   border-radius: 50px;
+  margin-bottom: 30px;
 }
 label{
-  margin-bottom: 10px;
   display: block;
 }
 
+.final{
+  margin-top: 25%;
+  margin-left: -10%;
+  font-family: Inter;
+  font-size: 128px;
+  font-weight: 400;
+  text-align: center;
+}
 
+button{
+  position: absolute;
+  margin-left: 1000px;
+  border: none;
+  background-color: transparent;
+  color:#614BB0;
+  font-size: 67px;
+}
+h1{
+  margin-left: -10%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+input[type=date]::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+  color: transparent;
+}
